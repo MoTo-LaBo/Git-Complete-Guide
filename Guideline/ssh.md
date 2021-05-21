@@ -1,4 +1,4 @@
-# SSH key Registration
+# SSH key 登録
 
 #### 1. 既存のSSHキーが存在するかどうかを確認
     ls -al ~/.ssh　　　　　　
