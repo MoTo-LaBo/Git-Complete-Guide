@@ -125,7 +125,7 @@ HEADの切り替え　＝　ポインタ　＝　自分の場所の作業の移�
 
 - master branch を常に最新の状態に保たれる
 - 今のリリースがどういうものか確認もできる
-- リリースした後にバグがあっても、ひとつ前の master branch ver　をも一回修正してリリースすれば、バグがない最新の状態を出せる
+- リリースした後にバグがあっても、ひとつ前の master branch ver　をもう一回修正してリリースすれば、バグがない最新の状態を出せる
 #### 「 **master branch はあくまでもリリース用としての使用が鉄則・基本の型**」
 - master →　topic1 →　masterへmerge →　topic2 →　masterへmerge
 - 上記の繰り返しで、開発したいものがあったときは最新の master branch から topic branch をきって開発していく。開発終了したら、master へ mergeする。
