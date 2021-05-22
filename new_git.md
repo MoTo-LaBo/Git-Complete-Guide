@@ -14,6 +14,8 @@
 - ２FA
 - OAuth
 ## 1. SSH key をローカルに作成
+- 参考site
+> ※ https://datawokagaku.com/github_ssh/
 #### 1.
     ssh-keygen -t ed25519 -C "<GitHub user.email>"
 - SSH key が　~/.ssh/ここに２つ作成される
@@ -36,7 +38,7 @@
     Host *
       AddKeysToAgent yes
       UseKeychain yes
-      IdentitiyFile ~/.ssh/id_ed25519
+      IdentityFile ~/.ssh/id_ed25519
 #### 8. SSH key を ssh-agent に登録する
     ssh-add -k ~/.ssh/id_ed25519
 - Identity added: /Users/user/.ssh/id_ed25519 (github user.email)
@@ -47,3 +49,4 @@
     pbcopy <~/.ssh/id_ed25519.pub
 #### 2. GitHub へ公開鍵を登録
 - GitHub 上で setting -> SSH and GPG keys -> SSH keys に公開鍵をペースト
+> ※ https://docs.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
