@@ -1,4 +1,18 @@
 # GitHub & Git 完全ガイド
+
+## New-Git_Guideline は submodule です
+- submodule として Git Complete Guide に紐づいています
+- Git Complete Guide clone 時は、New-Git_Guideline の file/direcotory 情報は clone されないので注意して下さい
+- 下記のcommand で clone すれば、New Git Guideline のfile / direcotory 情報も一緒に clone されます
+## Git Complete Gide cole時には submodule を初期化＆更新を実行
+    git clone --recurse-submodules <url>
+## submodule が更新された場合
+- **親 project の submodule directory は常に最新の commit をさすわけではない**
+- あくまでも別々の repositories なので submodule の中で個別に pull して情報を更新しないといけないが、下記の command をcurrent directory　で使用することで解決できる
+### 全ての submodule でコマンドを実行 ※ current directory で実行
+    git submodule forcach '<command>'
+- git subumodule foreach `git pull origin main`コマンドを実行する事によって、各 subumodule で git pull origin main が実行される
+
 ## Gitの使用目的
 ### file verの管理システム
 >一人でデータを管理する場合でも混乱する時がある。それが複数人で編集・共有する場合はもっと事故が起きやすい。それを未然に防ぐ為のシステム。間違って上書きや削除した場合でも修復できる。
